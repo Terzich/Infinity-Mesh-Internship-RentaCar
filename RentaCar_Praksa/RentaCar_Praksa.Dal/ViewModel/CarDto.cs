@@ -21,6 +21,7 @@ namespace RentaCar_Praksa.Dal.ViewModel
             Price = car.Price;
             ImageURL = car.ImageURL;
             ColorID = car.ColorID;
+            CarDetails = car.CarDetails;
         }
 
         public int Id { get; set; }
@@ -30,6 +31,8 @@ namespace RentaCar_Praksa.Dal.ViewModel
         public int NumberOfDoors { get; set; }
         public decimal Price { get; set; }
         public string ImageURL { get; set; }
+        public string CarDetails { get; set; }
+
         public int ColorID { get; set; }
 
     }

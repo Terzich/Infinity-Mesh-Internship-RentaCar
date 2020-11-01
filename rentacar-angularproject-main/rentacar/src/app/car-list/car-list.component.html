@@ -5,10 +5,10 @@
     <h1>Featured cars</h1>
     
     <div class="row justify-content-around">
-        <div class="card text-center" [class.selected]="car.name === selectedcar" [class.details-select]="savedCar && car.name == savedCar.name" style="width: 19rem; border-radius:20px" *ngFor="let car of cars | slice:0:3;">
-            <img class="card-img-top img-fluid" src="{{car.imgUrl}}" alt="Card image cap">
+        <div class="card text-center" [class.selected]="car.carName === selectedcar" [class.details-select]="savedCar && car.carName == savedCar.carName" style="width: 19rem; border-radius:20px" *ngFor="let car of cars | slice:0:3;">
+            <img class="card-img-top img-fluid" src="{{car.imageURL}}" alt="Card image cap">
             <div class="card-body">
-              <h5 class="card-title">{{car.name}}</h5>
+              <h5 class="card-title">{{car.carName}}</h5>
               <h1>{{car.price}}BAM <span style="font-size: 14px;">/ day</span></h1>
               <p class="card-text">{{car.details | slice:0:120}}...</p>
             </div>
@@ -19,10 +19,10 @@
     </div>
     <app-car-details [car] = savedCar></app-car-details>
     <app-contact-us></app-contact-us>
-    <button (click)="addMessage()">Add message</button>
-    <button (click)="clearMessages()">Clear messages</button>
+    <!-- <button (click)="addMessage()">Add message</button>
+    <button (click)="clearMessages()">Clear messages</button> -->
 
     
 </div>
-<label>Dodaj stavku: <input #newItem></label>
-<button (click)="addNewItem(newItem.value)">Dodaj u roditelja</button>
+<!-- <label>Dodaj stavku: <input #newItem></label>
+<button (click)="addNewItem(newItem.value)">Dodaj u roditelja</button> -->

@@ -15,7 +15,7 @@ export class CarListComponent implements OnInit {
 
   @Output() newItemEvent=new EventEmitter<string>();
   cars:Car[];
-  selectedcar:string = 'Mercedes';
+  selectedcar:string = 'Mercedes Benz C220';
   savedCar:Car;
   constructor(private carService : CarService, public messageService: MessageService) { 
   }
@@ -23,6 +23,8 @@ export class CarListComponent implements OnInit {
   ngOnInit(): void {
     this.carService.getCarsFromServer().subscribe(carsFromApi=>
       this.cars=carsFromApi.collection);
+      console.log(this.cars);
+      
   }
   addNewItem(value:string)
   {

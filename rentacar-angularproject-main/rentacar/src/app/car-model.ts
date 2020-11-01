@@ -2,10 +2,11 @@ import { Identifiers } from '@angular/compiler';
 
 export interface Car{
     id:number;
-    name:string;
-    year:number;
-    color:string;
+    carName:string;
+    yearOFProduction:number;
+    horsePower:number;
+    numberOfDoors:number;
     price:number;
-    details:string;
-    imgUrl:string;
+    imageURL:string;
+    carDetails:string
 } 
