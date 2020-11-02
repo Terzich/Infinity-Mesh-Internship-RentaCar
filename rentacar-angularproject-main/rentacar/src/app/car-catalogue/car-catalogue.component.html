@@ -1,0 +1,22 @@
+<div class="container" style="padding:20px; box-sizing:border-box; margin-top:20px">
+      <h1>Featured cars</h1>
+      
+      <div class="row justify-content-around">
+          <div class="card text-center" [class.selected]="car.carName === selectedcar" [class.details-select]="savedCar && car.carName == savedCar.carName" style="width: 19rem; border-radius:20px" *ngFor="let car of cars | slice:0:5;">
+              <img class="card-img-top img-fluid" src="{{car.imageURL}}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">{{car.carName}}</h5>
+                <h1>{{car.price}}BAM <span style="font-size: 14px;">/ day</span></h1>
+                <p class="card-text">{{car.details | slice:0:120}}...</p>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-outline-dark" [class.btn-popular]="car.name === selectedcar" (click)="openDetails(car)">Details</button>
+              </div>
+            </div>   
+      </div>
+      <app-car-details [car] = savedCar></app-car-details>
+      <app-contact-us></app-contact-us>
+  
+      
+  </div>
+  

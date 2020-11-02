@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { CarCatalogueComponent } from './car-catalogue/car-catalogue.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AppRoutingModule } from './app-routing.module';
     BannerComponent,
     CarListComponent,
     FooterComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    CarCatalogueComponent
   ],
   imports: [
     BrowserModule,
