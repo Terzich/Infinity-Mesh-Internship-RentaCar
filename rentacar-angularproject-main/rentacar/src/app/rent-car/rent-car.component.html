@@ -4,11 +4,34 @@
             <img src="{{Car.imageURL}}" class="img-fluid" alt="">
         </div>
         <div class="col-lg-8 p-5">
-            <h1 >{{Car.carName}} <span class="btn-rent" routerLink="/rentcar/{{Car.id}}">RENT</span></h1>
+            <h1>{{Car.carName}} </h1>
             <hr>
-            <p class="car-details"><span>Price: </span>{{Car.price}} BAM <br> <span>Color: </span>{{Car.color}} <br> <span>Year: </span> {{Car.yearOFProduction}}</p>
+            <p class="car-details"><span>Price: </span>{{Car.price}} BAM <br> <span>Color: </span>{{Car.color}} <br>
+                <span>Year: </span> {{Car.yearOFProduction}}</p>
             <p>{{Car.carDetails}}</p>
         </div>
-        
+        <div class="container">
+            <div class="row border-0 p-2">
+                <div class="col-lg-3 ml-auto">
+
+
+                    <button class="btn btn-success" (click)="drp.toggle()" [attr.aria-expanded]="drp.isOpen"
+                        type="button">Date Range Picker</button>
+
+                </div>
+                <div class="col-lg-4">
+                    <input class="form-control" #drp="bsDaterangepicker" bsDaterangepicker [(ngModel)]="bsRangeValue"
+                        style="width: 290px;" ngOnChanges>
+                </div>
+                <div class="col-lg-2">
+
+                    <input class="form-control border-0" readonly style="background-color:white;">
+                </div>
+                <div class="col-lg-2 ml-auto">
+                    <span class="btn-rent" routerLink="/rentcar/{{Car.id}}">RENT</span>
+                </div>
+
+            </div>
+        </div>
     </div>
 </div>
