@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import "jquery";
 import { observable, Observable } from 'rxjs';
+import { CarVM } from '../car-data';
 import { Car } from '../car-model';
 import { CarService } from '../car.service';
 import { MessageService } from '../message.service';
@@ -22,7 +23,7 @@ export class CarListComponent implements OnInit {
   
   ngOnInit(): void {
     this.carService.getCarsFromServer().subscribe(carsFromApi=>
-      this.cars=carsFromApi.collection);
+      this.cars=carsFromApi);
       console.log(this.cars);
       
   }

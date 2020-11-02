@@ -8,5 +8,5 @@ export interface Car{
     numberOfDoors:number;
     price:number;
     imageURL:string;
-    carDetails:string
+    carDetails:string 
 } 

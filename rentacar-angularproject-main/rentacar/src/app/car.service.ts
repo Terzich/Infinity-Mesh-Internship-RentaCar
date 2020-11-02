@@ -1,9 +1,9 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { CARS } from './car-data';
 import { Car } from './car-model';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
+import { CarVM } from './car-data';
 
 @Injectable({
   providedIn: 'root'
@@ -17,9 +17,7 @@ export class CarService {
 
   constructor(private http:HttpClient) { }
 
-  getCars():Car[]{
-    return CARS;
-  }
+  
   getCarsFromServer():Observable<Car[]>{
 
     return this.http.get<Car[]>(this.apiUrl,{'headers':this.options});

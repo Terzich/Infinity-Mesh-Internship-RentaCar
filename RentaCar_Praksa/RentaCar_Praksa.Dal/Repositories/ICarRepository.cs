@@ -9,7 +9,7 @@ namespace RentaCar_Praksa.Dal.Repositories
 {
     public interface ICarRepository
     {
-        Task<CarViewModel> GetCars(CancellationToken cancellationToken = default);
+        Task<List<CarDto>> GetCars(CancellationToken cancellationToken = default);
         Task<int> SaveCar(CarDto car, CancellationToken cancellationToken = default);
         Task EditCar(int carId, CarDto car, CancellationToken cancellationToken = default);
         Task RemoveCar(int carId, CancellationToken cancellationToken=default);
