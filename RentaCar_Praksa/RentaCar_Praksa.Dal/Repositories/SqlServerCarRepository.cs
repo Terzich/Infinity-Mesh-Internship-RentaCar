@@ -33,6 +33,24 @@ namespace RentaCar_Praksa.Dal.Repositories
 
         }
 
+        public async Task<CarDto> GetCarById(int id, CancellationToken cancellationToken = default)
+        {
+            var carDoamin = _context.Cars.Find(id);
+            var data = new CarDto
+            {
+                Id = carDoamin.Id,
+                CarName = carDoamin.CarName,
+                YearOFProduction = carDoamin.YearOFProduction,
+                HorsePower = carDoamin.HorsePower,
+                NumberOfDoors = carDoamin.NumberOfDoors,
+                Price = carDoamin.Price,
+                ImageURL = carDoamin.ImageURL,
+                ColorID = carDoamin.ColorID,
+                CarDetails = carDoamin.CarDetails
+            };
+            return data;
+        }
+
         public async Task<List<CarDto>> GetCars(CancellationToken cancellationToken = default)
         {
             var collection = await _context.Cars.ToListAsync(cancellationToken);

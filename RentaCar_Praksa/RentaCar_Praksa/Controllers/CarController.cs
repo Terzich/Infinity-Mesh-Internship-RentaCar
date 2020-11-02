@@ -25,6 +25,13 @@ namespace RentaCar_Praksa.Controllers
             var cars = await _carRepository.GetCars();
             return Ok(cars);
         }
+        
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get(int id)
+        {
+            var car = await _carRepository.GetCarById(id);
+            return Ok(car);
+        }
 
         [HttpPost]
         public async Task<IActionResult> Save([FromBody]CarDto car)

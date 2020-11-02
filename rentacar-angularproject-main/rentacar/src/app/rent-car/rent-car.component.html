@@ -1,0 +1,14 @@
+<div class="container" *ngIf="Car">
+    <div class="row align-items-center">
+        <div class="col-lg-4">
+            <img src="{{Car.imageURL}}" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-8 p-5">
+            <h1 >{{Car.carName}} <span class="btn-rent" routerLink="/rentcar/{{Car.id}}">RENT</span></h1>
+            <hr>
+            <p class="car-details"><span>Price: </span>{{Car.price}} BAM <br> <span>Color: </span>{{Car.color}} <br> <span>Year: </span> {{Car.yearOFProduction}}</p>
+            <p>{{Car.carDetails}}</p>
+        </div>
+        
+    </div>
+</div>

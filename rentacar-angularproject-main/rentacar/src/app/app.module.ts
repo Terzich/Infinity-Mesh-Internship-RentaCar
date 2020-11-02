@@ -12,6 +12,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { CarCatalogueComponent } from './car-catalogue/car-catalogue.component';
+import { RentCarComponent } from './rent-car/rent-car.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CarCatalogueComponent } from './car-catalogue/car-catalogue.component';
     CarListComponent,
     FooterComponent,
     ContactUsComponent,
-    CarCatalogueComponent
+    CarCatalogueComponent,
+    RentCarComponent
   ],
   imports: [
     BrowserModule,
