@@ -11,6 +11,7 @@
             <p>{{Car.carDetails}}</p>
         </div>
         <div class="container">
+            <h3 style="text-align: center; color: green;">This car is available for booking!</h3>
             <div class="row border-0 p-2">
                 <div class="col-lg-3 ml-auto">
 
@@ -21,11 +22,12 @@
                 </div>
                 <div class="col-lg-4">
                     <input class="form-control" #drp="bsDaterangepicker" bsDaterangepicker [(ngModel)]="bsRangeValue"
-                        style="width: 290px;" ngOnChanges>
-                </div>
+                        style="width: 290px;" (ngModelChange)="calculatePrice()" >
+                        
+                </div> 
                 <div class="col-lg-2">
 
-                    <input class="form-control border-0" readonly style="background-color:white;">
+                    <input class="form-control border-0" readonly style="background-color:white;" placeholder="{{totalPrice}}">
                 </div>
                 <div class="col-lg-2 ml-auto">
                     <span class="btn-rent" routerLink="/rentcar/{{Car.id}}">RENT</span>

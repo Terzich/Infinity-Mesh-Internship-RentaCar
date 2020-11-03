@@ -28,14 +28,10 @@ export class RentCarComponent implements OnInit {
   }
 
   calculatePrice():void{
-    var days=this.bsRangeValue[0].valueOf()-this.bsRangeValue[1].valueOf();
-    this.totalPrice=days*this.Car.price;
-    console.log(this.totalPrice);
+    const diffInMs = Math.abs(this.bsRangeValue[1].valueOf() - this.bsRangeValue[0].valueOf());
+   var r= diffInMs / (1000 * 60 * 60 * 24);
+    this.totalPrice=this.Car.price*r;
   }
-  ngOnChanges(){
-    var days=this.bsRangeValue[0].valueOf()-this.bsRangeValue[1].valueOf();
-    this.totalPrice=days*this.Car.price;
-    console.log(this.totalPrice);
-  }
+
 
 }
