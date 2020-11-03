@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RentaCar_Praksa.Dal;
 
 namespace RentaCar_Praksa.Dal.Migrations
 {
     [DbContext(typeof(RentaCarDbContext))]
-    partial class RentaCarDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201102111905_updateContactModel")]
+    partial class updateContactModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -73,9 +75,9 @@ namespace RentaCar_Praksa.Dal.Migrations
                             Id = 1,
                             CarID = 1,
                             CommentCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2020, 11, 2, 11, 22, 50, 839, DateTimeKind.Utc).AddTicks(2826),
+                            CreatedAt = new DateTime(2020, 11, 2, 11, 19, 4, 944, DateTimeKind.Utc).AddTicks(7397),
                             CreatedBy = "Terzic",
-                            From = new DateTime(2020, 11, 2, 11, 22, 50, 839, DateTimeKind.Utc).AddTicks(1472),
+                            From = new DateTime(2020, 11, 2, 11, 19, 4, 944, DateTimeKind.Utc).AddTicks(6026),
                             ModifideAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Rating = 0,
                             To = new DateTime(2020, 10, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -87,9 +89,9 @@ namespace RentaCar_Praksa.Dal.Migrations
                             Id = 2,
                             CarID = 3,
                             CommentCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2020, 11, 2, 11, 22, 50, 839, DateTimeKind.Utc).AddTicks(2924),
+                            CreatedAt = new DateTime(2020, 11, 2, 11, 19, 4, 944, DateTimeKind.Utc).AddTicks(7486),
                             CreatedBy = "Terzic",
-                            From = new DateTime(2020, 11, 2, 11, 22, 50, 839, DateTimeKind.Utc).AddTicks(2878),
+                            From = new DateTime(2020, 11, 2, 11, 19, 4, 944, DateTimeKind.Utc).AddTicks(7451),
                             ModifideAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Rating = 0,
                             To = new DateTime(2020, 10, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -151,7 +153,7 @@ namespace RentaCar_Praksa.Dal.Migrations
                             Id = 1,
                             CarName = "Mercedes Benz E220",
                             ColorID = 1,
-                            CreatedAt = new DateTime(2020, 11, 2, 11, 22, 50, 837, DateTimeKind.Utc).AddTicks(6338),
+                            CreatedAt = new DateTime(2020, 11, 2, 11, 19, 4, 943, DateTimeKind.Utc).AddTicks(663),
                             CreatedBy = "Terzic",
                             HorsePower = 131,
                             ModifideAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -164,7 +166,7 @@ namespace RentaCar_Praksa.Dal.Migrations
                             Id = 2,
                             CarName = "Mercedes Benz C220",
                             ColorID = 2,
-                            CreatedAt = new DateTime(2020, 11, 2, 11, 22, 50, 837, DateTimeKind.Utc).AddTicks(6419),
+                            CreatedAt = new DateTime(2020, 11, 2, 11, 19, 4, 943, DateTimeKind.Utc).AddTicks(742),
                             CreatedBy = "Terzic",
                             HorsePower = 131,
                             ModifideAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -177,7 +179,7 @@ namespace RentaCar_Praksa.Dal.Migrations
                             Id = 3,
                             CarName = "Volkswagen Golf VII",
                             ColorID = 3,
-                            CreatedAt = new DateTime(2020, 11, 2, 11, 22, 50, 837, DateTimeKind.Utc).AddTicks(6423),
+                            CreatedAt = new DateTime(2020, 11, 2, 11, 19, 4, 943, DateTimeKind.Utc).AddTicks(745),
                             CreatedBy = "Terzic",
                             HorsePower = 111,
                             ModifideAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -217,7 +219,7 @@ namespace RentaCar_Praksa.Dal.Migrations
                         {
                             Id = 1,
                             CityName = "Bugojno",
-                            CreatedAt = new DateTime(2020, 11, 2, 11, 22, 50, 818, DateTimeKind.Utc).AddTicks(2933),
+                            CreatedAt = new DateTime(2020, 11, 2, 11, 19, 4, 923, DateTimeKind.Utc).AddTicks(5559),
                             CreatedBy = "Terzic",
                             ModifideAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -225,7 +227,7 @@ namespace RentaCar_Praksa.Dal.Migrations
                         {
                             Id = 2,
                             CityName = "Sarajevo",
-                            CreatedAt = new DateTime(2020, 11, 2, 11, 22, 50, 818, DateTimeKind.Utc).AddTicks(3414),
+                            CreatedAt = new DateTime(2020, 11, 2, 11, 19, 4, 923, DateTimeKind.Utc).AddTicks(6036),
                             CreatedBy = "Terzic",
                             ModifideAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -233,7 +235,7 @@ namespace RentaCar_Praksa.Dal.Migrations
                         {
                             Id = 3,
                             CityName = "Mostar",
-                            CreatedAt = new DateTime(2020, 11, 2, 11, 22, 50, 818, DateTimeKind.Utc).AddTicks(3422),
+                            CreatedAt = new DateTime(2020, 11, 2, 11, 19, 4, 923, DateTimeKind.Utc).AddTicks(6044),
                             CreatedBy = "Terzic",
                             ModifideAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
@@ -268,7 +270,7 @@ namespace RentaCar_Praksa.Dal.Migrations
                         {
                             Id = 1,
                             ColorName = "Metalik siva",
-                            CreatedAt = new DateTime(2020, 11, 2, 11, 22, 50, 834, DateTimeKind.Utc).AddTicks(8574),
+                            CreatedAt = new DateTime(2020, 11, 2, 11, 19, 4, 940, DateTimeKind.Utc).AddTicks(2015),
                             CreatedBy = "Terzic",
                             ModifideAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -276,7 +278,7 @@ namespace RentaCar_Praksa.Dal.Migrations
                         {
                             Id = 2,
                             ColorName = "Metalik crna",
-                            CreatedAt = new DateTime(2020, 11, 2, 11, 22, 50, 834, DateTimeKind.Utc).AddTicks(8624),
+                            CreatedAt = new DateTime(2020, 11, 2, 11, 19, 4, 940, DateTimeKind.Utc).AddTicks(2059),
                             CreatedBy = "Terzic",
                             ModifideAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -284,7 +286,7 @@ namespace RentaCar_Praksa.Dal.Migrations
                         {
                             Id = 3,
                             ColorName = "Metalik crvena",
-                            CreatedAt = new DateTime(2020, 11, 2, 11, 22, 50, 834, DateTimeKind.Utc).AddTicks(8688),
+                            CreatedAt = new DateTime(2020, 11, 2, 11, 19, 4, 940, DateTimeKind.Utc).AddTicks(2062),
                             CreatedBy = "Terzic",
                             ModifideAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -292,7 +294,7 @@ namespace RentaCar_Praksa.Dal.Migrations
                         {
                             Id = 4,
                             ColorName = "Mat crna",
-                            CreatedAt = new DateTime(2020, 11, 2, 11, 22, 50, 834, DateTimeKind.Utc).AddTicks(8691),
+                            CreatedAt = new DateTime(2020, 11, 2, 11, 19, 4, 940, DateTimeKind.Utc).AddTicks(2064),
                             CreatedBy = "Terzic",
                             ModifideAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
@@ -309,9 +311,6 @@ namespace RentaCar_Praksa.Dal.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("CreatedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Message")
@@ -341,7 +340,7 @@ namespace RentaCar_Praksa.Dal.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2020, 11, 2, 12, 22, 50, 824, DateTimeKind.Local).AddTicks(7687),
+                            CreatedAt = new DateTime(2020, 11, 2, 12, 19, 4, 930, DateTimeKind.Local).AddTicks(3030),
                             CreatedBy = "Terzic",
                             Message = "Koliko dugo mogu da rentam vozilo?",
                             ModifideAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -350,7 +349,7 @@ namespace RentaCar_Praksa.Dal.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2020, 11, 2, 12, 22, 50, 826, DateTimeKind.Local).AddTicks(8046),
+                            CreatedAt = new DateTime(2020, 11, 2, 12, 19, 4, 932, DateTimeKind.Local).AddTicks(3247),
                             CreatedBy = "Terzic",
                             Message = "Da li su vozila odrzavana redovno?",
                             ModifideAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -386,7 +385,7 @@ namespace RentaCar_Praksa.Dal.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2020, 11, 2, 12, 22, 50, 828, DateTimeKind.Local).AddTicks(3528),
+                            CreatedAt = new DateTime(2020, 11, 2, 12, 19, 4, 933, DateTimeKind.Local).AddTicks(6646),
                             CreatedBy = "Terzic",
                             ModifideAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             RoleName = "Administrator"
@@ -394,7 +393,7 @@ namespace RentaCar_Praksa.Dal.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2020, 11, 2, 12, 22, 50, 828, DateTimeKind.Local).AddTicks(3588),
+                            CreatedAt = new DateTime(2020, 11, 2, 12, 19, 4, 933, DateTimeKind.Local).AddTicks(6708),
                             CreatedBy = "Terzic",
                             ModifideAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             RoleName = "Client"
@@ -455,7 +454,7 @@ namespace RentaCar_Praksa.Dal.Migrations
                             Id = 1,
                             Address = "Prusac bb 70223",
                             CityID = 1,
-                            CreatedAt = new DateTime(2020, 11, 2, 11, 22, 50, 823, DateTimeKind.Utc).AddTicks(8021),
+                            CreatedAt = new DateTime(2020, 11, 2, 11, 19, 4, 929, DateTimeKind.Utc).AddTicks(3403),
                             CreatedBy = "Terzic",
                             DateOfBirth = new DateTime(1999, 1, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "ahmedterzic@hotmail.com",
@@ -470,7 +469,7 @@ namespace RentaCar_Praksa.Dal.Migrations
                             Id = 2,
                             Address = "Logavina br. 21",
                             CityID = 2,
-                            CreatedAt = new DateTime(2020, 11, 2, 11, 22, 50, 823, DateTimeKind.Utc).AddTicks(8133),
+                            CreatedAt = new DateTime(2020, 11, 2, 11, 19, 4, 929, DateTimeKind.Utc).AddTicks(3507),
                             CreatedBy = "Terzic",
                             DateOfBirth = new DateTime(1998, 4, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "nijedoe@hotmail.com",
