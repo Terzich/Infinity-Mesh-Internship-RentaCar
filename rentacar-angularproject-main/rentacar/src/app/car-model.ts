@@ -1,6 +1,4 @@
-import { Identifiers } from '@angular/compiler';
-
-export interface Car{
+export class Car{
     id:number;
     carName:string;
     yearOFProduction:number;
@@ -8,5 +6,6 @@ export interface Car{
     numberOfDoors:number;
     price:number;
     imageURL:string;
-    carDetails:string 
+    carDetails:string;
+    colorId: number;
 } 
