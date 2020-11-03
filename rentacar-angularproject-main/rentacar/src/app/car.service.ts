@@ -24,4 +24,12 @@ export class CarService {
     
   }
 
+  getCarById(id:number):Observable<Car>{
+
+    const url=`${this.apiUrl}/${id}`;
+    return this.http.get<Car>(url,{'headers':this.options});
+
+  }
+
+
 }
