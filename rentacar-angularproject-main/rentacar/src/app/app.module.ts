@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { CarCatalogueComponent } from './car-catalogue/car-catalogue.component';
 import { RentCarComponent } from './rent-car/rent-car.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { OverviewComponent } from './dashboard/overview/overview.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { RentCarComponent } from './rent-car/rent-car.component';
     FooterComponent,
     ContactUsComponent,
     CarCatalogueComponent,
-    RentCarComponent
+    RentCarComponent,
+    DashboardComponent,
+    OverviewComponent
   ],
   imports: [
     BrowserModule,
