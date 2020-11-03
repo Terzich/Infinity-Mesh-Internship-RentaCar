@@ -11,7 +11,7 @@ namespace RentaCar_Praksa.Dal.Configuration
         public override void Configure(EntityTypeBuilder<Contact> builder)
         {
             base.Configure(builder);
-            builder.Property(b => b.Question).HasMaxLength(100).IsRequired();
+            builder.Property(b => b.Message).HasMaxLength(100).IsRequired();
             builder.HasOne(b => b.User).WithMany(b => b.Contacts).HasForeignKey(b => b.UserID);
 
             builder.HasData(new List<Contact>
@@ -19,7 +19,7 @@ namespace RentaCar_Praksa.Dal.Configuration
                 new Contact
                 {
                     Id=1,
-                    Question="Koliko dugo mogu da rentam vozilo?",
+                    Message="Koliko dugo mogu da rentam vozilo?",
                     UserID=2,
                     CreatedAt=DateTime.Now,
                     CreatedBy="Terzic",
@@ -28,7 +28,7 @@ namespace RentaCar_Praksa.Dal.Configuration
                 new Contact
                 {
                     Id=2,
-                    Question="Da li su vozila odrzavana redovno?",
+                    Message="Da li su vozila odrzavana redovno?",
                     UserID=2,
                     CreatedAt=DateTime.Now,
                     CreatedBy="Terzic",

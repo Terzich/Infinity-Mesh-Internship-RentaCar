@@ -35,6 +35,7 @@ namespace RentaCar_Praksa
             services.AddDbContext<RentaCarDbContext>(b => b.UseSqlServer(connectionStrign));
             services.AddScoped<ICarRepository, SqlServerCarRepository>();
             services.AddScoped<IUserRepository, SqlServerUserRepository>();
+            services.AddScoped<IContactRepository, SqlServerContactRepository>();
 
         }
 
@@ -51,16 +52,18 @@ namespace RentaCar_Praksa
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
 
-            app.UseCors(builder =>
-            {
-                builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
-
-            });
+            app.UseCors(options =>
+            options.WithOrigins("http://localhost:4200")
+            .AllowAnyMethod()
+            .AllowAnyHeader());
 
             app.UseAuthorization();
 
