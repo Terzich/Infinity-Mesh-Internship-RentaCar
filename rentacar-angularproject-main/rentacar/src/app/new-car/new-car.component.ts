@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NewcarService } from '../newcar.service';
+import { NgForm } from "@angular/forms";
+
 
 @Component({
   selector: 'app-new-car',
@@ -6,10 +9,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-car.component.scss']
 })
 export class NewCarComponent implements OnInit {
+    message: string = null;
+  constructor(public service: NewcarService) { }
 
-  constructor() { }
 
   ngOnInit(): void {
   }
 
+  onSubmit(form: NgForm) {
+    this.service.SaveCar(form.value).subscribe(data => {
+     console.log(data)}
+
+     );
+     this.message ="Successfully added new car!";
+   
+   
+   }
+   
 }
