@@ -32,6 +32,4 @@ export class RentCarComponent implements OnInit {
    var r= diffInMs / (1000 * 60 * 60 * 24);
     this.totalPrice=this.Car.price*r;
   }
-
-
 }
