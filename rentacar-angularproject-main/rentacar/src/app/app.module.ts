@@ -16,6 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CarCatalogueComponent } from './car-catalogue/car-catalogue.component';
 import { RentCarComponent } from './rent-car/rent-car.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { BookedCarModelComponent } from './booked-car-model/booked-car-model.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     FooterComponent,
     ContactUsComponent,
     CarCatalogueComponent,    
-    RentCarComponent
+    RentCarComponent, BookedCarModelComponent
   ],
   imports: [
     BrowserModule,

@@ -9,8 +9,5 @@ export class RentService {
     numberOfRentedCars:number= 0;
   constructor() { }
 
-  rentCar(car:Car):void{
-    this.rentedCars.push(car);
-    this.numberOfRentedCars++;
-  }
+  
 }

@@ -36,6 +36,7 @@ namespace RentaCar_Praksa
             services.AddScoped<ICarRepository, SqlServerCarRepository>();
             services.AddScoped<IUserRepository, SqlServerUserRepository>();
             services.AddScoped<IContactRepository, SqlServerContactRepository>();
+            services.AddScoped<IBaseRepository<BookedCarDto>, SqlServerBookedCarRepository>();
 
         }
 
