@@ -17,7 +17,6 @@ import { CarCatalogueComponent } from './car-catalogue/car-catalogue.component';
 import { RentCarComponent } from './rent-car/rent-car.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { NewCarComponent } from './new-car/new-car.component';
-// import { BookedCarModelComponent } from './booked-car-model/booked-car-model.component';
 
 @NgModule({
   declarations: [
