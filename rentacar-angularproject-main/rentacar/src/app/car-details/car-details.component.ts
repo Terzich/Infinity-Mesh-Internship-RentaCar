@@ -25,9 +25,5 @@ export class CarDetailsComponent implements OnInit {
     this.messageService.clear();
   }
 
-  rentCar(car:Car):void{
-    this.rentService.rentCar(car);
-    console.log(this.rentService.rentedCars);
-  }
 
 }

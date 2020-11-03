@@ -1,4 +1,5 @@
 <div class="container" *ngIf="Car">
+    
     <div class="row align-items-center">
         <div class="col-lg-4">
             <img src="{{Car.imageURL}}" class="img-fluid" alt="">
@@ -30,10 +31,12 @@
                     <input class="form-control border-0" readonly style="background-color:white;" placeholder="{{totalPrice}}">
                 </div>
                 <div class="col-lg-2 ml-auto">
-                    <span class="btn-rent" routerLink="">RENT</span>
+                    <span class="btn-rent" (click)="rentCar()">RENT</span>
                 </div>
 
             </div>
         </div>
+        <p  class="alert alert-success" style="width: 80%; margin: auto;" *ngIf="message">{{message}}</p>
     </div>
+
 </div>

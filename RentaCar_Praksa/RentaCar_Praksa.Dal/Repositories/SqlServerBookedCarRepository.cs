@@ -54,7 +54,7 @@ namespace RentaCar_Praksa.Dal.Repositories
         {
             var bookedCar = new BookedCar
             {
-                UserID = 1,
+                UserID = 2,
                 CarID = dto.CarID,
                 From = dto.From,
                 To = dto.To,
