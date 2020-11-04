@@ -13,6 +13,11 @@
               <h5 class="card-title">{{car.carName}}</h5>
               <h1>{{car.price}}BAM <span style="font-size: 14px;">/ day</span></h1>
               <p class="card-text">{{car.details | slice:0:120}}...</p>
+              <div *ngIf="">
+                <!-- <p *ngIf="car.id==bookedCar.carID && bookedCar.to>dateNow">Automobil zauzet od: <span style="color:darkred;">{{bookedCar.from}},</span> do: <span style="color: darkred;">{{bookedCar.to}}</span></p>
+                <p *ngIf="car.id==bookedCar.carID && bookedCar.to>dateNow" style="color: green;">Automobil je dostupan! </p>   -->
+                radi
+              </div>
             </div>
             <div class="card-footer">
               <button class="btn btn-outline-dark" [class.btn-popular]="car.name === selectedcar" (click)="openDetails(car)">Details</button>
