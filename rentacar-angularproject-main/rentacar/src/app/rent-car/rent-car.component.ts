@@ -35,10 +35,7 @@ export class RentCarComponent implements OnInit {
    var r= diffInMs / (1000 * 60 * 60 * 24);
     this.totalPrice=this.Car.price*r;
   }
-  returnToHome(){
-
-    this.router.navigate([""]);
-  }
+  
   rentCar(){
     let data:BookedCar={
       userID:1,
@@ -52,8 +49,10 @@ export class RentCarComponent implements OnInit {
     };
     this.rentService.addBookedCar(data).subscribe();
     this.message="Uspješno ste rentali vozilo!";
-    setTimeout(this.returnToHome,5000);
+    setTimeout( () => {
+     this.router.navigateByUrl("");
+    } ,3000);
     
   }
-
+  
 }
