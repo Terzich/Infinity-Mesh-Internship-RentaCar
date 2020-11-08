@@ -25,6 +25,7 @@ export class CarListComponent implements OnInit {
   }
   
   ngOnInit(): void {
+    debugger;
     this.carService.getCarsFromServer().subscribe(carsFromApi=>
       this.cars=carsFromApi);
       this.bookedCarService.getBookedCars().subscribe(bookedCarsFromApi=> this.bookedCars=bookedCarsFromApi);
